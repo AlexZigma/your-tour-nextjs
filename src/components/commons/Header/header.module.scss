@@ -1,0 +1,81 @@
+@use '../../../styles/mixins.scss' as *;  
+
+.header {
+  position: absolute;
+
+  width: 100%;
+
+  color: var(--white);
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: content-box;
+    height: 88px;
+    max-width: 1168px;
+    padding-inline: fluid-value(20, 57, 360, 1024);
+    margin-inline: auto;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      display: none;
+
+    //   max-width: fluid-value(320, 910, 360, 1024);
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-img {
+    @include mobile {
+      height: 22px;
+      width: 133px;
+      object-fit: cover;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 50px;
+
+    @include tablet {
+      gap: 30px;
+    }
+  }
+
+  &--fixed {
+    position: fixed;
+    z-index: 10;
+    top: -100px;
+    transition: top 300ms;
+
+    color: var(--black);
+    background: rgba(243, 239, 232, 0.6);
+    backdrop-filter: blur(27px);
+
+    & .header__logo {
+      filter: brightness(0) saturate(100%);
+    }
+
+    & .header__nav-link::after,
+    & .header__phone::after {
+      background-color: var(--black);
+    }
+
+  }
+
+  &--show {
+    top: 0;
+  }
+}

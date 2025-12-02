@@ -1,0 +1,185 @@
+@use 'mixins' as *;
+
+:root {
+  --black: #1B1F2B;
+  --white: #FFFFFF;
+  --orange-200: #EFA501;
+  --orange-100: #F8E6BE;
+  --green-400: #286562;
+  --green-300: #3B7E7B;
+  --green-200: #627F7E;
+  --green-100: #E0F0E5;
+  --gray-300: #A6A6A6;
+  --gray-200: #D9DFDB;
+  --gray-100: #F1F3F2;
+  --beige-200: #F4F0E9;
+  --beige-100: #F9F7F4;
+
+  --header-section-height: 743px;
+  --nav-height: 88px;
+  --main-gap: 135px;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Roboto-Regular.woff2") format("woff2"),
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/Roboto-Medium.woff2") format("woff2"),
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/Roboto-Bold.woff2") format("woff2"),
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--black);
+  background-color: var(--beige-100);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-anchor: none;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  transition-duration: 300ms;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+label {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1170px;
+  margin-inline: auto;
+}
+
+.wide {
+  grid-column: 1/-1;
+}
+
+.mirror {
+  & .card__img {
+    transform: scaleX(-1);
+  }
+
+  &:hover .card__img {
+    transform: scaleX(-1.2) scaleY(1.2) !important;
+  }
+}
+
+
+.hide {
+  &--tablet {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &--mobile {
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.show {
+  &-mobile {
+    @include mobile {
+      display: inline;
+    }
+  }
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: fluid-value(34, 96, 360, 1024);
+  line-height: fluid-value(38, 105, 360, 1024);
+  letter-spacing: 0.02em;
+
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: fluid-value(34, 59, 360, 1024);
+  line-height: 73px;
+
+  @include mobile() {
+    line-height: 112%;
+    letter-spacing: 0.02em;
+  }
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: fluid-value(28, 35, 360, 1024);
+  line-height: 122%;
+
+  @include mobile() {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+}
+
+.p-big {
+  font-style: normal;
+  font-weight: 700;
+  font-size: fluid-value(16, 23, 360, 1024);
+  line-height: 28px;
+  text-wrap-style: stable;
+  letter-spacing: 0.001em;
+
+  @include mobile() {
+    line-height: 23px;
+  }
+}
+
+.p-normal {
+  font-style: normal;
+  font-weight: 400;
+  font-size: fluid-value(16, 20, 360, 1024);
+  line-height: 28px;
+
+  @include mobile() {
+    line-height: 23px;
+  }
+}
+
+.p-small {
+  font-style: normal;
+  font-weight: 400;
+  font-size: fluid-value(16, 17, 360, 1024);
+  line-height: 24px;
+  letter-spacing: -0.01em;
+
+  @include mobile() {
+    line-height: 23px;
+  }
+}

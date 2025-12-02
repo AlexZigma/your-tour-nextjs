@@ -1,0 +1,58 @@
+@use '../../../../styles/mixins' as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  
+  min-height: fluid-value(488, 830, 360, 1024);
+  height: 100vh;
+  padding-top: 88px;
+
+  text-align: center;
+  color: var(--white);
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%),
+    url(/images/header-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mobile {
+    gap: 40px;
+  }
+
+
+  &__subtitle {
+    max-width: 562px;
+
+    @include tablet {
+      max-width: 400px;
+    }
+
+    @include mobile() {
+      max-width: 310px;
+    }
+  }
+
+  &__button {
+    padding: 5px 20px;
+    
+    border-radius: 10px;
+    background-color: var(--white);
+    color: var(--black);
+
+    &:hover {
+      background-color: var(--orange-200);
+      color: var(--white);
+    }
+
+    &:active {
+      background-color: var(--orange-100);
+      color: var(--black);
+    }
+  }
+}
