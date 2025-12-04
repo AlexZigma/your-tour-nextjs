@@ -1,4 +1,4 @@
-import Header from "@/components/commons/Header/header"
+import Header from "@/components/commons/Header/Header"
 import Hero from "@/components/pages/HomePage/Hero/Hero"
 import Tours from "@/components/pages/HomePage/Tours/Tours"
 import CreateTour from "@/components/pages/HomePage/CreateTour/CreateTour"
