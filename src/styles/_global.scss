@@ -1,4 +1,4 @@
-@use 'mixins' as *;
+@use './mixins' as *;
 
 :root {
   --black: #1B1F2B;
@@ -93,13 +93,13 @@ label {
 
 
 .hide {
-  &--tablet {
+  &-tablet {
     @include tablet {
       display: none;
     }
   }
 
-  &--mobile {
+  &-mobile {
     @include mobile {
       display: none;
     }
