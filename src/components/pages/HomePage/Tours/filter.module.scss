@@ -1,0 +1,21 @@
+@use '@/styles/mixins' as *;
+
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 10px;
+
+  @include mobile {
+    column-gap: 10px;
+  }
+
+  &__button {
+    padding-bottom: 6px;
+
+    @include mobile {
+      padding-bottom: 0;
+    }
+  }
+}
