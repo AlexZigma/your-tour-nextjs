@@ -1,10 +1,11 @@
-import './Button.module.scss'
+import styles from './Button.module.scss'
 
-export default function Button({ children, variant, ...props}) {
-    const className = `button button--${variant}`
+export default function Button({ children, variant, ...rest}) {
+    const variantClass = `button--${variant}`
+    const className = `${styles.button} ${styles[variantClass]}`
     return (
-        <button className={className} props>
-            children
+        <button className={className} {...rest}>
+            {children}
         </button>
     )
 }

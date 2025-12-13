@@ -147,18 +147,4 @@
     }
   }
 
-  &__list {
-    padding-left: 30px;
-    padding-top: 28px;
-
-    @include mobile {
-      padding-left: 24px;
-      padding-top: 23px;
-    }
-  }
-
-  &__list-row {
-    list-style-type: disc;
-  }
-
 }

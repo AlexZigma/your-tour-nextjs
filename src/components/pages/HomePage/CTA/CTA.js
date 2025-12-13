@@ -1,20 +1,24 @@
+import styles from './cta.module.scss'
+import AppLink from '@/components/commons/AppLink/AppLink'
+
+
 export default function CTA() {
     return (
-        <section className="section cta">
+        <section className={`${styles.cta}`}>
             <img
-                className="cta__img"
+                className={styles.cta__img}
                 src="images/footer-photo.jpg"
                 alt=""
                 loading="lazy"
             />
-            <div className="cta__content">
-                <h3 className="cta__title">Пора в путешествие вместе с нами!</h3>
-                <p className="cta__subtitle p-normal">
+            <div className={styles.cta__content}>
+                <h3>Пора в путешествие вместе с нами!</h3>
+                <p className={`${styles.cta__subtitle} p-normal`}>
                     Напиши на почту и узнай подробности <br />
-                    на{" "}
-                    <a className="link link--email" href="mailto:yourtour@gmail.com">
+                    на {' '}
+                    <AppLink variant={'email'} href="mailto:yourtour@gmail.com">
                         yourtour@gmail.com
-                    </a>{" "}
+                    </AppLink> 
                 </p>
             </div>
         </section>

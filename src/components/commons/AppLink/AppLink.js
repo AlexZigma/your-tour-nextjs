@@ -1,10 +1,34 @@
 import Link from "next/link";
-import './AppLink.module.scss'
+import styles from './AppLink.module.scss'
 
-export default function AppLink({ children, variant, href }) {
+export default function AppLink({ children, variant, href, img, className, dark = false, isActive = false, ...rest }) {
+    const classes = [
+        styles.link,
+        variant && styles[`link--${variant}`],
+        dark && styles['link--dark'],
+        isActive && styles['link--selected'],
+        className
+    ].filter(Boolean).join(' ')
+
     return (
-        <Link className={`${styles['header__nav-link']} ${styles["link"]}`} href={href}>
-            {children}
+        <Link className={classes} href={href} {...rest}>
+            {img ? (
+                <>
+                    <img
+                        className={styles.link__icon}
+                        src={img}
+                        alt={''}
+                        loading="lazy"
+                    />
+                    <span className={styles.link__text}>
+                        {children}
+                    </span>
+                </>
+            ) : (
+                children 
+            )
+            }
+
         </Link>
     )
 }

@@ -1,4 +1,4 @@
-@use '/src/styles/mixins' as *;
+@use '@/styles/mixins' as *;
 
 .button {
   height: 58px;
@@ -16,7 +16,7 @@
     width: 134px;
   }
   
-  &--primary {
+  &--submit {
     background-color: var(--green-400);
     color: var(--white);
 
@@ -28,7 +28,7 @@
     }
   }
   
-  &--secondary {
+  &--reset {
     background-color: var(--green-100);
     color: var(--green-400);
     
@@ -39,4 +39,5 @@
       background-color: var(--gray-200);
     }
   }
+  
 }

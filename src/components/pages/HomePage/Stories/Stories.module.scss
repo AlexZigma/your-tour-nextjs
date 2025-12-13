@@ -1,0 +1,30 @@
+@use '@/styles/mixins' as *;
+
+
+.story {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+
+    width: 100%;
+
+    @include mobile {
+      row-gap: 20px;
+    }
+  }
+}
+
+.list {
+  padding-left: 30px;
+  padding-top: 28px;
+
+  @include mobile {
+    padding-left: 24px;
+    padding-top: 23px;
+  }
+  
+  &__item {
+    list-style-type: disc;
+  }
+}

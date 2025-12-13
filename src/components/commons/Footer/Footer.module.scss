@@ -1,0 +1,74 @@
+@use '@/styles/mixins' as *;
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 88px;
+
+  background-color: var(--beige-200);
+
+  @include mobile {
+    height: 98px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    box-sizing: content-box;
+    width: 1168px;
+    padding-inline: fluid-value(21, 53, 360, 1024);
+    margin-inline: auto;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 7px;
+    }
+  }
+
+  &__title {
+    color: var(--gray-300);
+  }
+
+  &__social-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+
+    @include mobile {
+      gap: 15px;
+    }
+  }
+
+  &__social-item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__social-icon {
+    height: 26px;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-underline-offset: 4px;
+
+    @include mobile {
+      gap: 5px;
+    }
+
+    &:active {
+      text-decoration: underline solid var(--orange-200) 1px;
+      color: var(--orange-200);
+    }
+  }
+
+}

@@ -1,0 +1,74 @@
+@use '@/styles/mixins' as *;
+
+.photo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    max-width: 1920px;
+
+    @include mobile {
+        gap: 18px;
+    }
+
+    &__row {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 30px;
+
+        @include tablet {
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 20px;
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 10px;
+        }
+
+        &:nth-child(even) {
+            grid-template-columns: repeat(5, 1fr);
+
+            @include tablet {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            @include mobile {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        &:nth-child(1) {
+            @include mobile {
+                column-gap: 18px;
+            }
+        }
+    }
+
+    &__img {
+        object-fit: cover;
+        object-position: center;
+
+        height: 301px;
+        width: 100%;
+
+        border-radius: 50px;
+
+        @include tablet {
+            &:nth-last-child(2) {
+                display: none;
+            }
+        }
+
+        @include mobile {
+            border-radius: 20px;
+            max-height: fluid-value(110, 301, 360, 1024);
+
+            &:nth-last-child(1) {
+                display: none;
+            }
+        }
+
+    }
+}

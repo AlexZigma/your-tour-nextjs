@@ -1,0 +1,46 @@
+@use '@/styles/mixins' as *;
+
+.cta {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: content-box;
+  max-width: 1170px;
+  padding-inline: clamp(21px, 21px + 32 * (100vw - 360px) / 664, 53px);
+  margin-inline: auto;
+  margin-block: clamp(75px, 75px + 60 * (100vw - 360px) / 664, 135px);
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  &__img {
+    height: 370px;
+    aspect-ratio: 1;
+    border-radius: 50px;
+
+    @include mobile {
+      height: 133px;
+      width: 130px;
+      border-radius: 20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    max-width: 371px;
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    color: var(--gray-300);
+  }
+}

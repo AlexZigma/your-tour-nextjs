@@ -1,0 +1,269 @@
+@use '@/styles/mixins' as *;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+
+    padding: 70px;
+    border-radius: 50px;
+
+    background-color: var(--white);
+
+    @include tablet {
+        padding: 60px;
+    }
+
+    @include mobile {
+        gap: 30px;
+        margin-top: 40px;
+
+        padding: 20px 20px 40px 20px;
+        border-radius: 30px;
+    }
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        row-gap: 33px;
+
+        @include tablet {
+            column-gap: 20px;
+        }
+
+        @include mobile {
+            row-gap: 30px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 30px;
+
+        @include mobile {
+            gap: 10px;
+        }
+    }
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 40%;
+
+    min-width: 310px;
+
+    @include mobile {
+        min-width: 200px;
+    }
+
+    &__label {
+        padding-bottom: 8px;
+    }
+
+    &__input {
+        padding: 19px;
+        border-radius: 10px;
+
+        border: 1px solid var(--beige-200);
+        background-color: var(--beige-100);
+        cursor: pointer;
+
+        @include mobile {
+            padding: 10px;
+            height: 43px;
+        }
+
+        &::placeholder {
+            color: var(--gray-300);
+        }
+
+        &:hover {
+            background-color: var(--beige-200);
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid var(--gray-300);
+        }
+
+        &--select {
+            appearance: none;
+
+            background-image: url(/icons/ic-dropdown.svg);
+            background-repeat: no-repeat;
+            background-size: 26px;
+            background-position-y: center;
+            background-position-x: calc(100% - 20px);
+
+            @include mobile {
+                background-position-x: calc(100% - 10px);
+                height: 46px;
+            }
+
+            &:has(option:checked[value=""]) {
+                color: var(--gray-300);
+            }
+        }
+
+        &--date {
+            position: absolute;
+            z-index: -10;
+
+            inset: 0;
+        }
+
+        &--area {
+            resize: none;
+            height: 152px;
+
+            @include mobile {
+                height: 132px;
+            }
+        }
+    }
+
+    &__input-option:not([value=""]) {
+        color: var(--black);
+    }
+
+    &__container {
+        position: relative;
+
+        & .field__input {
+            width: 100%;
+        }
+    }
+}
+
+.radio {
+    border: none;
+    
+    &__list {
+        display: flex;
+        gap: 31px;
+
+        margin-top: 8px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+
+        @include mobile {
+            gap: 10px;
+        }
+    }
+
+    &__button {
+        position: relative;
+
+        height: 26px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+
+        appearance: none;
+        border: 2px solid var(--black);
+        cursor: pointer;
+
+        @include mobile {
+            height: 20px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+
+            height: 0%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+
+            background-color: var(--black);
+            transition-duration: inherit;
+        }
+
+        &:checked::after {
+            height: 50%;
+        }
+    }
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+
+    color: var(--gray-300);
+
+    @include tablet {
+        gap: 11px;
+    }
+
+    &__button {
+        position: relative;
+
+        height: 26px;
+        aspect-ratio: 1;
+        border-radius: 6px;
+
+        border: 2px solid var(--black);
+        appearance: none;
+        cursor: pointer;
+
+        @include mobile {
+            align-self: flex-start;
+
+            height: 20px;
+            border-radius: 3px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            background-image: url(/icons/check-mark.svg);
+
+            height: 0%;
+            aspect-ratio: 1;
+
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition-duration: inherit;
+        }
+
+        &:checked::after {
+            height: 60%;
+        }
+    }
+
+    &__label {
+        @include mobile {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 142%;
+            letter-spacing: 0;
+
+        }
+    }
+
+    &__link {
+        color: var(--black);
+
+        &:hover {
+            text-decoration: underline solid var(--black) 1px;
+        }
+
+        &:active {
+            color: var(--green-400);
+            text-decoration: underline solid var(--green-400) 1px;
+        }
+    }
+}
