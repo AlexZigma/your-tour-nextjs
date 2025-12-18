@@ -1,13 +1,15 @@
 import styles from './cta.module.scss'
 import AppLink from '@/components/commons/AppLink/AppLink'
-
+import Image from 'next/image'
 
 export default function CTA() {
     return (
         <section className={`${styles.cta}`}>
-            <img
+            <Image
                 className={styles.cta__img}
-                src="images/footer-photo.jpg"
+                src="/images/footer-photo.jpg"
+                width={370}
+                height={370}
                 alt=""
                 loading="lazy"
             />
