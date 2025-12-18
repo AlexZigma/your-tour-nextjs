@@ -1,12 +1,15 @@
 .picture {
-    position: absolute;
-    z-index: -2;
+    position: relative;
+    // z-index: -2;
 
-    height: 100%;
     width: 100%;
-    inset: 0;
-    object-fit: cover;
-    object-position: center;
-
-    transition: transform 300ms ease;
+    height: 301px;
+    // inset: 0;
+    
+    &__img {
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50px;
+        transition: transform 300ms ease;
+    }
 }

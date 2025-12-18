@@ -47,14 +47,6 @@
     }
 
     &__img {
-        object-fit: cover;
-        object-position: center;
-
-        height: 301px;
-        width: 100%;
-
-        border-radius: 50px;
-
         @include tablet {
             &:nth-last-child(2) {
                 display: none;
