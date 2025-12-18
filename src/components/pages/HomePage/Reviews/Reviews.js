@@ -1,5 +1,6 @@
 import Section from "@/components/commons/Section/Section"
 import styles from './Reviews.module.scss'
+import Image from "next/image"
 
 function ReviewCard({ title, subtitle, img, children }) {
     return (
@@ -14,9 +15,11 @@ function ReviewCard({ title, subtitle, img, children }) {
                     <h3>{title}</h3>
                     <p className={`${styles['review-card__subtitle']} p-small`}>{subtitle} </p>
                 </div>
-                <img
+                <Image
                     className={`${styles['review-card__img']}`}
                     src={img}
+                    width={75}
+                    height={75}
                     alt=""
                     loading="lazy"
                 />
@@ -36,7 +39,7 @@ export default function Reviews() {
         {
             title: 'Мария',
             subtitle: 'Тур: Вдали от дома',
-            img: 'images/review-photo-1.jpg',
+            img: '/images/review-photo-1.jpg',
             text: `Идейные соображения высшего порядка, а также рамки и место обучения
                     кадров обеспечивает широкому кругу (специалистов) участие в
                     формировании новых предложений. Идейные соображения высшего порядка, а
@@ -46,7 +49,7 @@ export default function Reviews() {
         {
             title: 'Павел',
             subtitle: 'Тур: Путешествие в горы',
-            img: 'images/review-photo-2.jpg',
+            img: '/images/review-photo-2.jpg',
             text: `Равным образом постоянный количественный рост и сфера нашей активности
                     играет важную роль в формировании системы обучения кадров,
                     соответствует насущным потребностям.
