@@ -2,7 +2,7 @@ import Section from "@/components/commons/Section/Section"
 import TourCard from "@/components/commons/TourCard/TourCard"
 import styles from './Stories.module.scss'
 
-export default function Stories() {
+export default function Stories({ id }) {
     const stories = [
         {
             title: 'Автостопом в Стамбул',
@@ -52,7 +52,7 @@ export default function Stories() {
 
     return (
         <Section
-            id={'stories'}
+            id={id}
             title={'Истории путешествий'}
             subtitle={'Идейные соображения высшего порядка,\nа также рамки и место обучения кадров'}>
 

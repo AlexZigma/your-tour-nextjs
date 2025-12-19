@@ -28,9 +28,9 @@ function ReviewCard({ title, subtitle, img, children }) {
     )
 }
 
-export default function Reviews() {
+export default function Reviews({ id }) {
     const sectionInfo = {
-        id: 'reviews',
+        id: id,
         title: 'Отзывы наших \nпутешественников',
         subtitle: 'Идейные соображения высшего порядка, \nа также рамки и место обучения кадров'
     }

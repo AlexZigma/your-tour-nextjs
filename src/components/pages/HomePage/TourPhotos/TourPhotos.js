@@ -2,9 +2,9 @@ import Section from "@/components/commons/Section/Section";
 import styles from './TourPhoto.module.scss'
 import Picture from "@/components/commons/Picture/Picture";
 
-export default function TourPhotos() {
+export default function TourPhotos({ id }) {
     const sectionInfo = {
-        id: '',
+        id: id,
         title: 'Фотографии путешествий',
         subtitle: 'Идейные соображения высшего порядка,\nа также рамки и место обучения кадров',
     }
@@ -37,7 +37,7 @@ export default function TourPhotos() {
                 {photos.map((item, rowIndex) =>
                     <div className={styles['photo-grid__row']} key={rowIndex}>
                         {item.map((photo, index) =>
-                            <Picture src={photo.src} key={index} className={styles['photo-grid__img']}/>
+                            <Picture src={photo.src} key={index} className={styles['photo-grid__img']} />
                         )}
                     </div>
                 )}
