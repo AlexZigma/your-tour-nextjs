@@ -38,7 +38,7 @@ export default function Header() {
                         height={32}
                         src="/icons/YourTour.svg"
                         alt="YourTour"
-                        loading="lazy"
+                        loading="eager"
                     />
                 </Link>
                 <nav className={`${styles["header__nav"]} p-normal`}>
