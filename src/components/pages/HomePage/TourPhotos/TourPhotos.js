@@ -1,16 +1,6 @@
 import Section from "@/components/commons/Section/Section";
 import styles from './TourPhoto.module.scss'
-
-function Photo({ src, className = '' }) {
-    return (
-        <img
-            className={styles['photo-grid__img']}
-            src={src}
-            alt=""
-            loading="lazy"
-        />
-    )
-}
+import Picture from "@/components/commons/Picture/Picture";
 
 export default function TourPhotos() {
     const sectionInfo = {
@@ -21,33 +11,33 @@ export default function TourPhotos() {
 
     const photos = [
         [
-            {src: 'images/travel-photo-1.png'},
-            {src: 'images/travel-photo-2.png'},
-            {src: 'images/travel-photo-3.png'},
-            {src: 'images/travel-photo-4.png'},
+            { src: '/images/travel-photo-1.png' },
+            { src: '/images/travel-photo-2.png' },
+            { src: '/images/travel-photo-3.png' },
+            { src: '/images/travel-photo-4.png' },
         ],
         [
-            {src: 'images/travel-photo-5.png'},
-            {src: 'images/travel-photo-6.png'},
-            {src: 'images/travel-photo-7.jpg'},
-            {src: 'images/travel-photo-8.png'},
-            {src: 'images/travel-photo-9.png'},
+            { src: '/images/travel-photo-5.png' },
+            { src: '/images/travel-photo-6.png' },
+            { src: '/images/travel-photo-7.jpg' },
+            { src: '/images/travel-photo-8.png' },
+            { src: '/images/travel-photo-9.png' },
         ],
         [
-            {src: 'images/travel-photo-10.png'},
-            {src: 'images/travel-photo-11.jpg'},
-            {src: 'images/travel-photo-12.jpg'},
-            {src: 'images/travel-photo-13.jpg'},
+            { src: '/images/travel-photo-10.png' },
+            { src: '/images/travel-photo-11.jpg' },
+            { src: '/images/travel-photo-12.jpg' },
+            { src: '/images/travel-photo-13.jpg' },
         ],
-        
+
     ]
     return (
         <Section {...sectionInfo} wide>
             <div className={styles['photo-grid']}>
-                {photos.map((item, rowIndex) => 
+                {photos.map((item, rowIndex) =>
                     <div className={styles['photo-grid__row']} key={rowIndex}>
-                        {item.map((photo, index) => 
-                            <Photo src={photo.src} key={index}/>
+                        {item.map((photo, index) =>
+                            <Picture src={photo.src} key={index} className={styles['photo-grid__img']}/>
                         )}
                     </div>
                 )}
