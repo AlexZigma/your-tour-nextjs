@@ -16,6 +16,7 @@ export default function TourCard({ title, subtitle = '', img, href, children, li
                 src={img}
                 alt=""
                 fill
+                sizes='(max-width: 1024px) 100vw, 450px'
                 loading="lazy"
             />
             <div className={styles.card__top}>
