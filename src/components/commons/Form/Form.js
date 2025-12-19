@@ -126,7 +126,7 @@ function DateInput({ id, label, minDate, value, onChange }) {
 
 function TextArea({ id, label, value, onChange }) {
     return (
-        <Field id={id} label={label} wide>
+        <Field id={id} label={label}>
             <textarea
                 className={`${styles.field__input} ${styles['field__input--area']}`}
                 name={id}
@@ -207,9 +207,12 @@ export default function Form() {
 
     const [formState, setFormState] = useState(initialFormState)
 
-    const handleChange = (e) => {
-        setFormState((prev) => ({ ...prev, [e.target.name]: e.target.type === 'checkbox' ? e.target.checked : e.target.value }))
-        console.log(formState)
+    const setStateElement = (key) => (value) => {
+        setFormState((prev) => ({ ...prev, [key]: value }))
+    }
+
+    const handleChange = (key) => (e) => {
+        setStateElement(key)(e.target.type === 'checkbox' ? e.target.checked : e.target.value)
     }
 
     const handleReset = () => {
@@ -224,7 +227,7 @@ export default function Form() {
                     label={'Имя'}
                     type="text"
                     value={formState.name}
-                    onChange={handleChange}
+                    onChange={handleChange('name')}
                     placeholder="Введите Ваше имя"
                     autoComplete="name"
                     required
@@ -239,7 +242,7 @@ export default function Form() {
                         { value: 'opt3', label: 'Моря' },
                     ]}
                     value={formState.direction}
-                    onChange={handleChange}
+                    onChange={handleChange('direction')}
                 />
 
                 <Input
@@ -247,7 +250,7 @@ export default function Form() {
                     label={'Email'}
                     type="email"
                     value={formState.email}
-                    onChange={handleChange}
+                    onChange={handleChange('email')}
                     placeholder="example@mail.com"
                     autoComplete="email"
                     required
@@ -257,7 +260,7 @@ export default function Form() {
                     id="phone"
                     label={'Телефон'}
                     value={formState.phone}
-                    onChange={(value) => setFormState((prev) => ({...prev, phone: value}))}
+                    onChange={setStateElement('phone')}
                     autoComplete="tel"
                     required
                 />
@@ -265,21 +268,21 @@ export default function Form() {
                     id={'dateStart'}
                     label={'Дата от'}
                     value={formState.dateStart}
-                    onChange={handleChange}
+                    onChange={handleChange('dateStart')}
                     minDate={todayIso}
                 />
                 <DateInput
                     id={'dateEnd'}
                     label={'Дата до'}
                     value={formState.dateEnd}
-                    onChange={handleChange}
+                    onChange={handleChange('dateEnd')}
                     minDate={formState.dateStart || todayIso}
                 />
                 <TextArea
                     id={'comment'}
                     label={'Коментарий'}
                     value={formState.comment}
-                    onChange={handleChange}
+                    onChange={handleChange('comment')}
                 />
             </div>
             <RadioGroup
@@ -290,9 +293,9 @@ export default function Form() {
                     { id: 'no', label: 'Нет' },
                 ]}
                 value={formState.age}
-                onChange={handleChange}
+                onChange={handleChange('age')}
             />
-            <CheckBox id='license' value={formState.license} onChange={handleChange}>
+            <CheckBox id='license' value={formState.license} onChange={handleChange('license')}>
                 Нажимая кнопку, я принимаю условия {' '}
                 <Link className={styles['checkbox__link']} href="">
                     Лицензионного договора
