@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react'
 export default function Header() {
     const nav_links = [
         { label: 'Туры', id: 'tours' },
-        { label: 'Создать тур', id: 'tour-create' },
+        { label: 'Создать тур', id: 'create-tour' },
         { label: 'Отзывы', id: 'reviews' },
         { label: 'Истории', id: 'stories' },
     ]
