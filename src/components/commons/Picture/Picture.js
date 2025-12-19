@@ -1,12 +1,16 @@
 import styles from './Picture.module.scss'
+import Image from 'next/image'
 
-export default function Picture() {
+export default function Picture({src, className}) {
     return (
-        <img
-            className={styles.picture}
-            src={img}
-            alt=""
-            loading="lazy"
-        />
+        <div className={`${styles.picture} ${className}`}>
+            <Image
+                className={`${styles.picture__img}`}
+                src={src}
+                fill
+                alt=""
+                sizes="(max-width: 1024px) 100vw, 450px"
+            />
+        </div>
     )
 }
