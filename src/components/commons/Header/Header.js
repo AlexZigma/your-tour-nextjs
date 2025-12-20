@@ -3,17 +3,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import AppLink from '../AppLink/AppLink'
 import { useEffect, useRef, useState } from 'react'
+import { nav_links } from '@/data/nav'
 
 export default function Header() {
-    const nav_links = [
-        { label: 'Туры', id: 'tours' },
-        { label: 'Создать тур', id: 'create-tour' },
-        { label: 'Отзывы', id: 'reviews' },
-        { label: 'Истории', id: 'stories' },
-    ]
-
     const headerRef = useRef(null)
-
     const [isFixed, setIsFixed] = useState(false)
 
     useEffect(() => {
@@ -44,8 +37,8 @@ export default function Header() {
                 <nav className={`${styles["header__nav"]} p-normal`}>
                     <ul className={styles["header__nav-list"]}>
                         {nav_links.map((item) =>
-                            <li key={item.id}>
-                                <AppLink href={`#${item.id}`} dark={isFixed}>
+                            <li key={item.href}>
+                                <AppLink href={item.href} dark={isFixed}>
                                     {item.label}
                                 </AppLink>
                             </li>
