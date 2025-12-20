@@ -11,11 +11,47 @@
     column-gap: 10px;
   }
 
-  &__button {
-    padding-bottom: 6px;
+}
 
-    @include mobile {
-      padding-bottom: 0;
+.filter-button {
+  position: relative;
+
+  padding-bottom: 6px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50%;
+
+    width: 0;
+    height: 2px;
+
+    background-color: var(--white);
+    transition-duration: inherit;
+  }
+
+  &:hover::after {
+    width: 100%;
+
+    background-color: var(--black);
+  }
+
+  &--active {
+    color: var(--orange-200);
+
+    &::after {
+      width: 100%;
+      background-color: var(--orange-200);
     }
+
+    &:hover::after {
+      background-color: var(--orange-200);
+    }
+  }
+
+  @include mobile {
+    padding-bottom: 0;
   }
 }
