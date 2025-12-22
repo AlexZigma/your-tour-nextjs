@@ -1,3 +1,5 @@
+@use '@/styles/mixins' as *;
+
 .picture {
     position: relative;
     // z-index: -2;
@@ -5,11 +7,16 @@
     width: 100%;
     height: 301px;
     // inset: 0;
-    
+
     &__img {
         object-fit: cover;
         object-position: center;
         border-radius: 50px;
         transition: transform 300ms ease;
+
+        @include mobile {
+            border-radius: 20px;
+            // max-height: fluid-value(110, 301, 360, 1024);
+        }
     }
 }
