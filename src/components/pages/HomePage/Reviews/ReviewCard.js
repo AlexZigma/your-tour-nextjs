@@ -5,7 +5,7 @@ export default function ReviewCard({ title, subtitle, img, children }) {
     return (
         <div className={`${styles['review-card']}`}>
             <div className={`${['review-card__top']}`}>
-                <p className="p-big">
+                <p className={`p-big ${styles['review-card__text']}`}>
                     {children}
                 </p>
             </div>
