@@ -282,7 +282,7 @@ export default function Form() {
                 />
                 <TextArea
                     id={'comment'}
-                    label={'Коментарий'}
+                    label={'Комментарий'}
                     value={formState.comment}
                     onChange={handleChange('comment')}
                 />
