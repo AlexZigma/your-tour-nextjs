@@ -50,7 +50,7 @@ function Select({ id, label, options, defaultValue, value, onChange }) {
     )
 }
 
-function PhoneInput({ id, label, value, onChange }) {
+function PhoneInput({ id, label, value, onChange, ...rest }) {
     const mask = '+7 (999) 999-99-99'
 
     const handleChange = (e) => {
@@ -76,8 +76,10 @@ function PhoneInput({ id, label, value, onChange }) {
                 className={`${styles.field__input}`}
                 type="tel"
                 placeholder="+7 (___) ___-__-__"
+                pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}"
                 value={value}
                 onChange={handleChange}
+                {...rest}
             />
         </Field>
     )
