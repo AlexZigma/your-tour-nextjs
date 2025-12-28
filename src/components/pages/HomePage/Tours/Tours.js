@@ -1,5 +1,5 @@
 import styles from './tours.module.scss'
-import TourCard from '@/components/commons/TourCard/TourCard'
+import TourCard from '@/components/commons/Card/TourCard'
 import Section from '@/components/commons/Section/Section'
 import { filter_list, tours } from '@/data/tours'
 
