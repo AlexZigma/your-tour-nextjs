@@ -14,12 +14,12 @@ export default function Reviews({ id }) {
     return (
         <Section {...sectionInfo}>
             <div className={styles.reviews}>
-                {reviews.map((review, index) =>
+                {reviews.map((review) =>
                     <ReviewCard
                         title={review.title}
                         subtitle={review.subtitle}
                         img={review.img}
-                        key={index}
+                        key={review.id}
                     >
                         {review.text}
                     </ReviewCard>

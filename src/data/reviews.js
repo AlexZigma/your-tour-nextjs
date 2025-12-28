@@ -1,5 +1,6 @@
 export const reviews = [
     {
+        id: 1,
         title: 'Мария',
         subtitle: 'Тур: Вдали от дома',
         img: '/images/review-photo-1.jpg',
@@ -10,6 +11,7 @@ export const reviews = [
                     оценить значение модели развития.`
     },
     {
+        id: 2,
         title: 'Павел',
         subtitle: 'Тур: Путешествие в горы',
         img: '/images/review-photo-2.jpg',

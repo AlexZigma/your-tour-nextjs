@@ -42,8 +42,8 @@ function Select({ id, label, options, defaultValue, value, onChange }) {
                 onChange={onChange}
             >
                 <option disabled hidden value=''>{defaultValue.label}</option>
-                {options.map((option, index) =>
-                    <option value={option.value} key={index} className={styles['field__input-option']}>{option.label}</option>
+                {options.map((option) =>
+                    <option value={option.value} key={option.value} className={styles['field__input-option']}>{option.label}</option>
                 )}
             </select>
         </Field>
@@ -145,8 +145,8 @@ function RadioGroup({ id, label, options, value, onChange }) {
         <fieldset className={styles.radio}>
             <legend>{label}</legend>
             <div className={styles.radio__list}>
-                {options.map((item, index) =>
-                    <label className={styles.radio__item} htmlFor={item.id} key={index}>
+                {options.map((item) =>
+                    <label className={styles.radio__item} htmlFor={item.id} key={item.id}>
                         <input
                             className={styles.radio__button}
                             type="radio"

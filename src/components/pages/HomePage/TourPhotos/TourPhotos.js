@@ -15,8 +15,8 @@ export default function TourPhotos({ id }) {
             <div className={styles['photo-grid']}>
                 {tour_photos.map((item, rowIndex) =>
                     <div className={styles['photo-grid__row']} key={rowIndex}>
-                        {item.map((photo, index) =>
-                            <Picture src={photo.src} key={index} className={styles['photo-grid__img']} />
+                        {item.map((photo) =>
+                            <Picture src={photo.src} key={photo.src} className={styles['photo-grid__img']} />
                         )}
                     </div>
                 )}

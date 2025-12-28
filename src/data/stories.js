@@ -1,5 +1,6 @@
 export const stories = [
     {
+        id: 1,
         title: 'Автостопом в Стамбул',
         img: '/images/story-photo-1.png',
         href: '',
@@ -10,6 +11,7 @@ export const stories = [
         list: ['вкусная еда', 'дешевый транспорт', 'красивый город.']
     },
     {
+        id: 2,
         title: 'Автостопом в Стамбул',
         img: '/images/story-photo-2.png',
         href: '',
@@ -19,6 +21,7 @@ export const stories = [
                 участие в формировании новых предложений.`
     },
     {
+        id: 3,
         title: 'Автостопом в Стамбул',
         img: '/images/story-photo-3.png',
         href: '',
