@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>YourTour</title>
         <meta name="description" content="Идейные соображения высшего порядка, а также рамки и место обучения кадров" />
         <meta name="keywords" content="путешествия, туры, отдых, билеты, экскурсии, море, горы, пляж, туризм, выбрать тур" />
       </Head>
