@@ -1,6 +1,5 @@
 import styles from './TourCard.module.scss'
 import Link from 'next/link'
-import Image from 'next/image';
 import AppLink from '../AppLink/AppLink';
 import AnimatedCard from './AnimatedCard';
 
@@ -18,7 +17,7 @@ export default function StoryCard({ title, img, href, children, links }) {
                 {links &&
                     <div className={`${styles.card__socials} p-normal`}>
                         {links?.map((item) =>
-                            <AppLink variant={'social'} href={item.href} key={item.id}>
+                            <AppLink variant={'social'} href={item.href} key={item.href}>
                                 {item.label}
                             </AppLink>
                         )}

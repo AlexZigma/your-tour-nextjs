@@ -4,7 +4,7 @@ export const stories = [
         title: 'Автостопом в Стамбул',
         img: '/images/story-photo-1.png',
         href: '',
-        links: [{ label: 'telegram', href: '' }, { label: 'facebook', href: '' }, { label: 'ВКонтакте', href: '' },],
+        links: [{ label: 'telegram', href: '#1' }, { label: 'facebook', href: '#2' }, { label: 'ВКонтакте', href: '#3' },],
         description: `Идейные соображения высшего порядка, а также рамки и место
                 обучения кадров обеспечивает широкому кругу(специалистов)
                 участие в формировании новых предложений:`,
@@ -15,7 +15,7 @@ export const stories = [
         title: 'Автостопом в Стамбул',
         img: '/images/story-photo-2.png',
         href: '',
-        links: [{ label: 'telegram', href: '' }, { label: 'facebook', href: '' }, { label: 'ВКонтакте', href: '' },],
+        links: [{ label: 'telegram', href: '#1' }, { label: 'facebook', href: '#2' }, { label: 'ВКонтакте', href: '#3' },],
         description: `Идейные соображения высшего порядка, а также рамки и место
                 обучения кадров обеспечивает широкому кругу (специалистов)
                 участие в формировании новых предложений.`
@@ -25,7 +25,7 @@ export const stories = [
         title: 'Автостопом в Стамбул',
         img: '/images/story-photo-3.png',
         href: '',
-        links: [{ label: 'telegram', href: '' }, { label: 'facebook', href: '' }, { label: 'ВКонтакте', href: '' },],
+        links: [{ label: 'telegram', href: '#1' }, { label: 'facebook', href: '#2' }, { label: 'ВКонтакте', href: '#3' },],
         description: `
                 Идейные соображения высшего порядка, а также рамки и место
                 обучения кадров обеспечивает широкому кругу (специалистов)
