@@ -1,0 +1,18 @@
+import styles from './TourCard.module.scss'
+import Image from 'next/image';
+
+export default function AnimatedCard({children, img, className}) {
+    return (
+        <div className={`${styles.card} ${className}`}>
+            <Image
+                className={styles.card__img}
+                src={img}
+                alt=""
+                fill
+                sizes='(max-width: 1024px) 100vw, 450px'
+                loading="lazy"
+            />
+            {children}
+        </div>
+    )
+}
