@@ -22,8 +22,8 @@
     border-radius: 50px;
 
     @include mobile {
-      height: 133px;
-      width: 130px;
+      height: fluid-value(130, 370, 360, 1024);;
+      width: auto;
       border-radius: 20px;
     }
   }
