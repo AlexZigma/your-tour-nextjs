@@ -33,6 +33,10 @@
     width: 26px;
     height: 26px;
     object-fit: none;
+
+    @include mobile {
+      width: 22px;
+    }
   }
 
   &--phone {
