@@ -9,9 +9,11 @@ export default function Footer() {
                 <p className={`${styles.footer__title} p-normal`}>Наши социальные сети</p>
                 <ul className={`${styles['footer__social-list']} p-normal`}>
                     {footerLinks.map((link) =>
-                        <AppLink variant={'footer'} img={link.img} href={link.href} key={link.id} >
-                            {link.label}
-                        </AppLink>
+                        <li key={link.id}>
+                            <AppLink variant={'footer'} img={link.img} href={link.href} key={link.id} >
+                                {link.label}
+                            </AppLink>
+                        </li>
                     )}
                 </ul>
             </div>
