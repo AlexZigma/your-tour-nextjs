@@ -16,6 +16,7 @@ export default function Footer() {
               <AppLink
                 variant={"footer"}
                 img={link.img}
+                alt={link.label}
                 href={link.href}
                 key={link.id}
               >

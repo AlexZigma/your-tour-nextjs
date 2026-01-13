@@ -3,9 +3,9 @@ import Link from "next/link";
 import AnimatedCard from "./AnimatedCard";
 import styles from "./TourCard.module.scss";
 
-export default function TourCard({ title, subtitle, img, href }) {
+export default function TourCard({ title, subtitle, img, alt, href }) {
   return (
-    <AnimatedCard img={img}>
+    <AnimatedCard img={img} alt={alt}>
       <div className={styles.card__top}>
         <h3>{title}</h3>
         {subtitle && <p className="p-small">{subtitle}</p>}

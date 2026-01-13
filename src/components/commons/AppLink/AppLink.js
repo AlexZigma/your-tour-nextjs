@@ -9,6 +9,7 @@ export default function AppLink({
   variant,
   href,
   img,
+  alt,
   className,
   dark = false,
   isActive = false,
@@ -31,7 +32,7 @@ export default function AppLink({
             src={img}
             width={26}
             height={26}
-            alt={""}
+            alt={alt}
             loading="lazy"
           />
           <span className={styles.link__text}>{children}</span>

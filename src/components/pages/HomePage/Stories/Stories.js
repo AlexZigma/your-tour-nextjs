@@ -19,6 +19,7 @@ export default function Stories({ id }) {
             <StoryCard
               title={story.title}
               img={story.img}
+              alt={story.alt}
               href={story.href}
               links={story.links}
             >

@@ -20,6 +20,7 @@ export default function Reviews({ id }) {
             title={review.title}
             subtitle={review.subtitle}
             img={review.img}
+            alt={review.title}
             key={review.id}
           >
             {review.text}

@@ -19,8 +19,9 @@ export default function TourPhotos({ id }) {
           <div className={styles["photo-grid__row"]} key={rowIndex}>
             {item.map((photo) => (
               <Picture
-                src={photo.src}
                 key={photo.src}
+                src={photo.src}
+                alt={photo.alt}
                 className={styles["photo-grid__img"]}
               />
             ))}

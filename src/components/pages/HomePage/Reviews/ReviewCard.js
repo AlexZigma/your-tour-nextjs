@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import styles from "./Reviews.module.scss";
 
-export default function ReviewCard({ title, subtitle, img, children }) {
+export default function ReviewCard({ title, subtitle, img, alt, children }) {
   return (
     <div className={`${styles["review-card"]}`}>
       <div className={`${["review-card__top"]}`}>
@@ -20,7 +20,7 @@ export default function ReviewCard({ title, subtitle, img, children }) {
           src={img}
           width={75}
           height={75}
-          alt=""
+          alt={alt}
           loading="lazy"
         />
       </div>

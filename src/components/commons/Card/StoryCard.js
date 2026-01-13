@@ -4,9 +4,9 @@ import AppLink from "../AppLink/AppLink";
 import AnimatedCard from "./AnimatedCard";
 import styles from "./TourCard.module.scss";
 
-export default function StoryCard({ title, img, href, children, links }) {
+export default function StoryCard({ title, img, alt, href, children, links }) {
   return (
-    <AnimatedCard img={img} className={styles["card--big"]}>
+    <AnimatedCard img={img} alt={alt} className={styles["card--big"]}>
       <div className={styles.card__top}>
         <h3>{title}</h3>
         {children && <div className="p-normal">{children}</div>}
