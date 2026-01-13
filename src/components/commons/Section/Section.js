@@ -1,5 +1,5 @@
-import styles from "./Section.module.scss";
 import FilterList from "../Filter/FilterList";
+import styles from "./Section.module.scss";
 
 export default function Section({
   id,

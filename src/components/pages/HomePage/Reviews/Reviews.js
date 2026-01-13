@@ -1,7 +1,8 @@
 import Section from "@/components/commons/Section/Section";
-import styles from "./Reviews.module.scss";
 import { reviews } from "@/data/reviews";
+
 import ReviewCard from "./ReviewCard";
+import styles from "./Reviews.module.scss";
 
 export default function Reviews({ id }) {
   const sectionInfo = {

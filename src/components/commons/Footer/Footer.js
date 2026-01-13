@@ -1,6 +1,7 @@
-import styles from "./Footer.module.scss";
-import AppLink from "../AppLink/AppLink";
 import { footerLinks } from "@/data/footer";
+
+import AppLink from "../AppLink/AppLink";
+import styles from "./Footer.module.scss";
 
 export default function Footer() {
   return (

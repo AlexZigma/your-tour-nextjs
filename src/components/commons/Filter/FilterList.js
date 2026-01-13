@@ -1,5 +1,6 @@
-import styles from "./filter.module.scss";
 import { useState } from "react";
+
+import styles from "./filter.module.scss";
 import FilterButton from "./FilterButton";
 
 export default function FilterList({ filter_list, className = "" }) {

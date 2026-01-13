@@ -1,5 +1,6 @@
-import styles from "./Picture.module.scss";
 import Image from "next/image";
+
+import styles from "./Picture.module.scss";
 
 export default function Picture({ src, className, alt = "", ...rest }) {
   return (

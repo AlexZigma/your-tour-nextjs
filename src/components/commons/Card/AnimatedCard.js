@@ -1,5 +1,6 @@
-import styles from "./TourCard.module.scss";
 import Image from "next/image";
+
+import styles from "./TourCard.module.scss";
 
 export default function AnimatedCard({ children, img, className }) {
   return (

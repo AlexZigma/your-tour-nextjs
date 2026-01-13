@@ -1,7 +1,8 @@
-import Section from "@/components/commons/Section/Section";
 import StoryCard from "@/components/commons/Card/StoryCard";
-import styles from "./Stories.module.scss";
+import Section from "@/components/commons/Section/Section";
 import { stories } from "@/data/stories";
+
+import styles from "./Stories.module.scss";
 
 export default function Stories({ id }) {
   return (

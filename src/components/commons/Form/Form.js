@@ -1,7 +1,9 @@
-import Button from "@/components/commons/Button/Button";
 import Link from "next/link";
-import styles from "./Form.module.scss";
 import { useEffect, useRef, useState } from "react";
+
+import Button from "@/components/commons/Button/Button";
+
+import styles from "./Form.module.scss";
 // import PhoneInput from 'react-phone-number-input'
 
 function Field({ id, label, children }) {

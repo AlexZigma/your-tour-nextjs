@@ -1,6 +1,7 @@
-import styles from "./TourCard.module.scss";
 import Link from "next/link";
+
 import AnimatedCard from "./AnimatedCard";
+import styles from "./TourCard.module.scss";
 
 export default function TourCard({ title, subtitle, img, href }) {
   return (

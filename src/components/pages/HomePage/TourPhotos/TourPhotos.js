@@ -1,7 +1,8 @@
-import Section from "@/components/commons/Section/Section";
-import styles from "./TourPhoto.module.scss";
 import Picture from "@/components/commons/Picture/Picture";
+import Section from "@/components/commons/Section/Section";
 import { tour_photos } from "@/data/tourPhotos";
+
+import styles from "./TourPhoto.module.scss";
 
 export default function TourPhotos({ id }) {
   const sectionInfo = {

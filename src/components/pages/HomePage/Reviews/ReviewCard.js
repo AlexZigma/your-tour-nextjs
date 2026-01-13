@@ -1,5 +1,6 @@
-import styles from "./Reviews.module.scss";
 import Image from "next/image";
+
+import styles from "./Reviews.module.scss";
 
 export default function ReviewCard({ title, subtitle, img, children }) {
   return (

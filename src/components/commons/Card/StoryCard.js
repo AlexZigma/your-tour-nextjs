@@ -1,7 +1,8 @@
-import styles from "./TourCard.module.scss";
 import Link from "next/link";
+
 import AppLink from "../AppLink/AppLink";
 import AnimatedCard from "./AnimatedCard";
+import styles from "./TourCard.module.scss";
 
 export default function StoryCard({ title, img, href, children, links }) {
   return (

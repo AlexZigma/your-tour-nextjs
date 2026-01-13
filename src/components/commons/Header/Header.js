@@ -1,9 +1,11 @@
-import styles from "./Header.module.scss";
-import Link from "next/link";
 import Image from "next/image";
-import AppLink from "../AppLink/AppLink";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+
 import { nav_links } from "@/data/nav";
+
+import AppLink from "../AppLink/AppLink";
+import styles from "./Header.module.scss";
 
 export default function Header() {
   const headerRef = useRef(null);

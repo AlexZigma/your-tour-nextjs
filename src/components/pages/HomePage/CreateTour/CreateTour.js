@@ -1,5 +1,5 @@
-import Section from "@/components/commons/Section/Section";
 import Form from "@/components/commons/Form/Form";
+import Section from "@/components/commons/Section/Section";
 
 export default function CreateTour({ id }) {
   return (

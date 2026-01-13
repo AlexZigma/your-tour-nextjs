@@ -1,6 +1,8 @@
-import styles from "./cta.module.scss";
-import AppLink from "@/components/commons/AppLink/AppLink";
 import Image from "next/image";
+
+import AppLink from "@/components/commons/AppLink/AppLink";
+
+import styles from "./cta.module.scss";
 
 export default function CTA() {
   return (

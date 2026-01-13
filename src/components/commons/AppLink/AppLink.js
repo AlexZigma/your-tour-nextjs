@@ -1,6 +1,7 @@
-import Link from "next/link";
-import styles from "./AppLink.module.scss";
 import Image from "next/image";
+import Link from "next/link";
+
+import styles from "./AppLink.module.scss";
 
 export default function AppLink({
   children,
@@ -42,13 +43,3 @@ export default function AppLink({
     </Link>
   );
 }
-
-const name = "James";
-
-const person = { first: name };
-
-console.log(person);
-
-const sayHelloLinting = (fName) => {
-  console.log(`Hello linting, ${fName}`);
-};
