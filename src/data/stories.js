@@ -2,7 +2,7 @@ export const stories = [
   {
     id: 1,
     title: "Автостопом в Стамбул",
-    img: "/images/story-photo-1.png",
+    img: "/images/story-photo-1.webp",
     href: "",
     links: [
       { label: "telegram", href: "#1" },
@@ -17,7 +17,7 @@ export const stories = [
   {
     id: 2,
     title: "Автостопом в Стамбул",
-    img: "/images/story-photo-2.png",
+    img: "/images/story-photo-2.webp",
     href: "",
     links: [
       { label: "telegram", href: "#1" },
@@ -31,7 +31,7 @@ export const stories = [
   {
     id: 3,
     title: "Автостопом в Стамбул",
-    img: "/images/story-photo-3.png",
+    img: "/images/story-photo-3.webp",
     href: "",
     links: [
       { label: "telegram", href: "#1" },

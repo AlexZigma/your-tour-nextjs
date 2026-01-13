@@ -9,7 +9,7 @@ export default function CTA() {
     <section className={`${styles.cta}`}>
       <Image
         className={styles.cta__img}
-        src="/images/footer-photo.jpg"
+        src="/images/footer-photo.webp"
         width={370}
         height={370}
         alt=""

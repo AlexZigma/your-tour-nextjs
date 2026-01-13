@@ -3,7 +3,7 @@ export const reviews = [
     id: 1,
     title: "Мария",
     subtitle: "Тур: Вдали от дома",
-    img: "/images/review-photo-1.jpg",
+    img: "/images/review-photo-1.webp",
     text: `Идейные соображения высшего порядка, а также рамки и место обучения
                     кадров обеспечивает широкому кругу (специалистов) участие в
                     формировании новых предложений. Идейные соображения высшего порядка, а
@@ -14,7 +14,7 @@ export const reviews = [
     id: 2,
     title: "Павел",
     subtitle: "Тур: Путешествие в горы",
-    img: "/images/review-photo-2.jpg",
+    img: "/images/review-photo-2.webp",
     text: (
       <>
         Равным образом постоянный количественный рост и сфера нашей активности
