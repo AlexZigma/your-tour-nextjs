@@ -12,7 +12,7 @@ export default function CTA() {
         src="/images/footer-photo.webp"
         width={370}
         height={370}
-        alt=""
+        alt="travel with us"
         loading="lazy"
       />
       <div className={styles.cta__content}>

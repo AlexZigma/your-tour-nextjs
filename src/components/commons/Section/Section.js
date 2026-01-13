@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 import FilterList from "../Filter/FilterList";
 import styles from "./Section.module.scss";
 
@@ -10,9 +12,12 @@ export default function Section({
   wide = false,
   className,
 }) {
-  const classes = [styles.section, wide && styles["section--wide"], className]
-    .filter(Boolean)
-    .join(" ");
+  const classes = clsx(
+    styles.section,
+    className,
+    wide && styles["section--wide"]
+  );
+
   return (
     <section className={classes} id={id}>
       <header className={styles.section__header}>

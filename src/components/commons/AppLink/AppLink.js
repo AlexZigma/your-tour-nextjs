@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,15 +14,13 @@ export default function AppLink({
   isActive = false,
   ...rest
 }) {
-  const classes = [
+  const classes = clsx(
     styles.link,
+    className,
     variant && styles[`link--${variant}`],
     dark && styles["link--dark"],
     isActive && styles["link--selected"],
-    className,
-  ]
-    .filter(Boolean)
-    .join(" ");
+  )
 
   return (
     <Link className={classes} href={href} {...rest}>
