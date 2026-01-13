@@ -1,4 +1,4 @@
-@use '@/styles/mixins' as *;
+@use "@/styles/mixins" as *;
 
 .button {
   height: 58px;
@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   border-radius: 10px;
   cursor: pointer;
 
@@ -15,7 +15,7 @@
     height: 47px;
     width: 134px;
   }
-  
+
   &--submit {
     background-color: var(--green-400);
     color: var(--white);
@@ -27,11 +27,11 @@
       background-color: var(--green-200);
     }
   }
-  
+
   &--reset {
     background-color: var(--green-100);
     color: var(--green-400);
-    
+
     &:hover {
       background-color: var(--gray-100);
     }
@@ -39,5 +39,4 @@
       background-color: var(--gray-200);
     }
   }
-  
 }

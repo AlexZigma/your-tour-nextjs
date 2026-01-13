@@ -1,6 +1,6 @@
-import Header from "@/components/commons/Header/Header"
-import Footer from "@/components/commons/Footer/Footer"
-import HomePage from "@/components/pages/HomePage/HomePage"
+import Header from "@/components/commons/Header/Header";
+import Footer from "@/components/commons/Footer/Footer";
+import HomePage from "@/components/pages/HomePage/HomePage";
 
 export default function Home() {
   return (
@@ -11,5 +11,5 @@ export default function Home() {
       </main>
       <Footer />
     </>
-  )
+  );
 }

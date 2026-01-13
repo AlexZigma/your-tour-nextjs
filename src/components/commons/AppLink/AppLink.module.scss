@@ -1,10 +1,10 @@
-@use '@/styles/mixins' as *;
+@use "@/styles/mixins" as *;
 
 .link {
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -40,7 +40,6 @@
   }
 
   &--phone {
-
     &:active {
       color: var(--green-400);
     }
@@ -90,7 +89,6 @@
   }
 
   &--social {
-
     &:active {
       color: var(--orange-200);
     }
@@ -119,7 +117,7 @@
     }
 
     .link__text::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -127,7 +125,7 @@
 
       width: 0;
       height: 2px;
-      
+
       background-color: var(--black);
       transition-duration: inherit;
     }
@@ -146,7 +144,8 @@
 
     &:active .link__icon {
       transition-duration: inherit;
-      filter: brightness(0) saturate(100%) invert(67%) sepia(77%) saturate(2796%) hue-rotate(8deg) brightness(101%) contrast(104%);
+      filter: brightness(0) saturate(100%) invert(67%) sepia(77%)
+        saturate(2796%) hue-rotate(8deg) brightness(101%) contrast(104%);
     }
   }
 }

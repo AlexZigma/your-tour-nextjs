@@ -12,7 +12,16 @@
   }
 }
 
-
-@function fluid-value($min-size, $max-size, $min-breakpoint: 360, $max-breakpoint: 1024) {
-  @return clamp(#{$min-size}px, #{$min-size}px + ($max-size - $min-size) * (100vw - #{$min-breakpoint}px) / ($max-breakpoint - $min-breakpoint), #{$max-size}px)
+@function fluid-value(
+  $min-size,
+  $max-size,
+  $min-breakpoint: 360,
+  $max-breakpoint: 1024
+) {
+  @return clamp(
+    #{$min-size}px,
+    #{$min-size}px + ($max-size - $min-size) * (100vw - #{$min-breakpoint}px) /
+      ($max-breakpoint - $min-breakpoint),
+    #{$max-size}px
+  );
 }

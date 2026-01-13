@@ -1,4 +1,4 @@
-@use '../../../../styles/mixins' as *;
+@use "../../../../styles/mixins" as *;
 
 .hero {
   display: flex;
@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   gap: 50px;
-  
+
   min-height: fluid-value(488, 830, 360, 1024);
   height: 100vh;
 
@@ -15,7 +15,8 @@
   text-align: center;
   color: var(--white);
 
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%),
     url(/images/header-background.png);
   background-position: center;
@@ -25,7 +26,6 @@
   @include mobile {
     gap: 40px;
   }
-
 
   &__subtitle {
     max-width: 562px;
@@ -41,7 +41,7 @@
 
   &__button {
     padding: 5px 20px;
-    
+
     border-radius: 10px;
     background-color: var(--white);
     color: var(--black);

@@ -1,4 +1,4 @@
-@use '@/styles/mixins' as *;
+@use "@/styles/mixins" as *;
 
 .card {
   position: relative;
@@ -35,7 +35,7 @@
     inset: 0;
     object-fit: cover;
     object-position: center;
-    
+
     transition: transform 300ms ease;
   }
 
@@ -47,10 +47,12 @@
 
     inset: 0;
 
-    background: linear-gradient(360deg,
-        rgba(0, 0, 0, 0.4) 0%,
-        rgba(0, 0, 0, 0.06) 48.44%,
-        rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(
+      360deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.06) 48.44%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
   }
 
   &__top {
@@ -84,23 +86,23 @@
 
     padding: 7px 20px;
     margin: -7px -20px;
-    
+
     border-radius: 50px;
 
     &::after {
-      content: '';
+      content: "";
       display: inline-block;
-      
+
       width: 24px;
       height: 26px;
       margin-left: 16px;
-      
+
       background: url(/icons/arrow.svg) no-repeat;
       background-position: center;
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       inset: 0;
     }
@@ -112,7 +114,6 @@
     &:active {
       background-color: var(--orange-200);
     }
-
   }
 
   &__socials {
@@ -137,14 +138,15 @@
 
     &::before {
       content: "";
-      background: linear-gradient(270deg,
-          rgba(0, 0, 0, 0) 0.01%,
-          rgba(0, 0, 0, 0.2) 100%);
+      background: linear-gradient(
+        270deg,
+        rgba(0, 0, 0, 0) 0.01%,
+        rgba(0, 0, 0, 0.2) 100%
+      );
 
       position: absolute;
       inset: 0;
       z-index: -1;
     }
   }
-
 }

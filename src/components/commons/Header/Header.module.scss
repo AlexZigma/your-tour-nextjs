@@ -1,4 +1,4 @@
-@use '../../../styles/mixins.scss' as *;
+@use "../../../styles/mixins.scss" as *;
 
 .header {
   position: absolute;
@@ -63,14 +63,12 @@
     & .header__logo {
       filter: brightness(0) saturate(100%);
     }
-
-
   }
 
   &--show {
     top: 0;
 
-    & ::after{
+    & ::after {
       background-color: var(--black);
     }
   }

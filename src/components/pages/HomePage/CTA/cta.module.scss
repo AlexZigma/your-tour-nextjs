@@ -1,4 +1,4 @@
-@use '@/styles/mixins' as *;
+@use "@/styles/mixins" as *;
 
 .cta {
   display: flex;
@@ -22,7 +22,7 @@
     border-radius: 50px;
 
     @include mobile {
-      height: fluid-value(130, 370, 360, 1024);;
+      height: fluid-value(130, 370, 360, 1024);
       width: auto;
       border-radius: 20px;
     }
@@ -32,7 +32,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
+
     max-width: 371px;
 
     @include mobile {

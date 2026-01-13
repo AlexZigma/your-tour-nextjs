@@ -1,4 +1,4 @@
-@use '@/styles/mixins' as *;
+@use "@/styles/mixins" as *;
 
 .footer {
   display: flex;
@@ -70,5 +70,4 @@
       color: var(--orange-200);
     }
   }
-
 }
