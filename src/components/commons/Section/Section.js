@@ -27,7 +27,7 @@ export default function Section({
         )}
         {filterList && (
           <FilterList
-            filter_list={filterList}
+            filterList={filterList}
             className={styles["section__filter-list"]}
           />
         )}

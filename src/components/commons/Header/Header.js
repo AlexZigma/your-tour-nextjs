@@ -49,7 +49,7 @@ export default function Header() {
         </nav>
         <AppLink
           variant="phone"
-          className={`p-normal`}
+          className="p-normal"
           href="tel:+79999999999"
           dark={isFixed}
         >

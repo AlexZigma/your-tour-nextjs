@@ -8,7 +8,7 @@ export default function Stories({ id }) {
   return (
     <Section
       id={id}
-      title={"Истории путешествий"}
+      title="Истории путешествий"
       subtitle={
         "Идейные соображения высшего порядка,\nа также рамки и место обучения кадров"
       }

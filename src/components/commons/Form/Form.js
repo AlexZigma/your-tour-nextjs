@@ -48,7 +48,7 @@ export default function Form() {
       <div className={styles.form__grid}>
         <Input
           id="name"
-          label={"Имя"}
+          label="Имя"
           type="text"
           value={formState.name}
           onChange={handleChange("name")}
@@ -58,7 +58,7 @@ export default function Form() {
         />
         <Select
           id="direction"
-          label={"Направление"}
+          label="Направление"
           defaultValue={{ value: "", label: "Куда хотите ехать" }}
           options={[
             { value: "opt1", label: "Горы" },
@@ -71,7 +71,7 @@ export default function Form() {
 
         <Input
           id="email"
-          label={"Email"}
+          label="Email"
           type="email"
           value={formState.email}
           onChange={handleChange("email")}
@@ -82,36 +82,36 @@ export default function Form() {
 
         <PhoneInput
           id="phone"
-          label={"Телефон"}
+          label="Телефон"
           value={formState.phone}
           onChange={setStateElement("phone")}
           autoComplete="tel"
           required
         />
         <DateInput
-          id={"dateStart"}
-          label={"Дата от"}
+          id="dateStart"
+          label="Дата от"
           value={formState.dateStart}
           onChange={handleChange("dateStart")}
           minDate={todayIso}
         />
         <DateInput
-          id={"dateEnd"}
-          label={"Дата до"}
+          id="dateEnd"
+          label="Дата до"
           value={formState.dateEnd}
           onChange={handleChange("dateEnd")}
           minDate={formState.dateStart || todayIso}
         />
         <TextArea
-          id={"comment"}
-          label={"Комментарий"}
+          id="comment"
+          label="Комментарий"
           value={formState.comment}
           onChange={handleChange("comment")}
         />
       </div>
       <RadioGroup
-        id={"age"}
-        label={"Вам есть 18 лет?"}
+        id="age"
+        label="Вам есть 18 лет?"
         options={[
           { id: "yes", label: "Да" },
           { id: "no", label: "Нет" },

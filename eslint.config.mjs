@@ -13,6 +13,10 @@ const eslintConfig = defineConfig([
     rules: {
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
+      "react/jsx-curly-brace-presence": [
+        "error",
+        { props: "never", children: "never" },
+      ],
     },
   },
   // Override default ignores of eslint-config-next.

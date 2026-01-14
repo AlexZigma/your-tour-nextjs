@@ -17,8 +17,8 @@ export default function StoryCard({ title, img, alt, href, children, links }) {
         </Link>
         {links && (
           <div className={`${styles.card__socials} p-normal`}>
-            {links?.map((item) => (
-              <AppLink variant={"social"} href={item.href} key={item.href}>
+            {links.map((item) => (
+              <AppLink variant="social" href={item.href} key={item.href}>
                 {item.label}
               </AppLink>
             ))}

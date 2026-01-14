@@ -5,7 +5,7 @@ export default function CreateTour({ id }) {
   return (
     <Section
       id={id}
-      title={"Собери свой тур"}
+      title="Собери свой тур"
       subtitle={
         "Идейные соображения высшего порядка,\nа также рамки и место обучения кадров"
       }

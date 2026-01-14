@@ -20,7 +20,7 @@ export default function CTA() {
         <p className={`${styles.cta__subtitle} p-normal`}>
           Напиши на почту и узнай подробности <br />
           на{" "}
-          <AppLink variant={"email"} href="mailto:yourtour@gmail.com">
+          <AppLink variant="email" href="mailto:yourtour@gmail.com">
             yourtour@gmail.com
           </AppLink>
         </p>

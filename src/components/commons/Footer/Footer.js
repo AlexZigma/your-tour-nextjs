@@ -14,7 +14,7 @@ export default function Footer() {
           {footerLinks.map((link) => (
             <li key={link.id}>
               <AppLink
-                variant={"footer"}
+                variant="footer"
                 img={link.img}
                 alt={link.label}
                 href={link.href}

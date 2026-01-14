@@ -49,7 +49,7 @@ export const tours = [
   },
 ];
 
-export const filter_list = [
+export const filterList = [
   { id: 1, label: "Популярные" },
   { id: 2, label: "Авторские" },
   { id: 3, label: "Походы" },
