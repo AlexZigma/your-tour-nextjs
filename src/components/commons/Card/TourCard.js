@@ -12,7 +12,8 @@ export default function TourCard({ title, subtitle, img, alt, href }) {
       </div>
       <div className={styles.card__bottom}>
         <Link className={`${styles.card__button} p-big`} href={href}>
-          Подробнее
+          {/* Подробнее */}
+          <span className={styles['card__button-label']}>Подробнее</span>
         </Link>
       </div>
     </AnimatedCard>

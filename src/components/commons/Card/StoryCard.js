@@ -7,13 +7,13 @@ import styles from "./TourCard.module.scss";
 export default function StoryCard({ title, img, alt, href, children, links }) {
   return (
     <AnimatedCard img={img} alt={alt} className={styles["card--big"]}>
-      <div className={styles.card__top}>
+      <div className={`${styles.card__top} ${styles['card__top--big']}`}>
         <h3>{title}</h3>
         {children && <div className="p-normal">{children}</div>}
       </div>
       <div className={styles.card__bottom}>
         <Link className={`${styles.card__button} p-big`} href={href}>
-          Подробнее
+          <span className={styles['card__button-label']}>Подробнее</span>
         </Link>
         {links && (
           <div className={`${styles.card__socials} p-normal`}>
