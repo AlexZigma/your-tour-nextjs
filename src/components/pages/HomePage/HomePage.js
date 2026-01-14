@@ -9,13 +9,13 @@ import Tours from "@/components/pages/HomePage/Tours/Tours";
 export default function HomePage() {
   return (
     <>
-      <Hero href="#tours"></Hero>
-      <Tours id="tours"></Tours>
-      <CreateTour id="create-tour"></CreateTour>
-      <Reviews id="reviews"></Reviews>
-      <TourPhotos id="tour-photos"></TourPhotos>
-      <Stories id="stories"></Stories>
-      <CTA></CTA>
+      <Hero findTourHref="#tours" />
+      <Tours id="tours" />
+      <CreateTour id="create-tour" />
+      <Reviews id="reviews" />
+      <TourPhotos id="tour-photos" />
+      <Stories id="stories" />
+      <CTA />
     </>
   );
 }
