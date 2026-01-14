@@ -5,9 +5,7 @@ import styles from "./Reviews.module.scss";
 export default function ReviewCard({ title, subtitle, img, alt, children }) {
   return (
     <div className={`${styles["review-card"]}`}>
-      <div className={`${["review-card__top"]}`}>
-        <p className="p-big">{children}</p>
-      </div>
+      <p className="p-big">{children}</p>
       <div className={`${styles["review-card__bottom"]}`}>
         <div className={`${styles["review-card__info"]}`}>
           <h3>{title}</h3>
