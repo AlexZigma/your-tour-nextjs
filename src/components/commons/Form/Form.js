@@ -1,231 +1,41 @@
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 import Button from "@/components/commons/Button/Button";
+import { getTodayIso } from "@/utils/getTodayIso";
 
+import Checkbox from "./Checkbox";
+import DateInput from "./DateInput";
 import styles from "./Form.module.scss";
-// import PhoneInput from 'react-phone-number-input'
+import Input from "./Input";
+import PhoneInput from "./PhoneInput";
+import RadioGroup from "./RadioGroup";
+import Select from "./Select";
+import TextArea from "./TextArea";
 
-function Field({ id, label, children }) {
-  return (
-    <div className={styles.field}>
-      <label className={styles.field__label} htmlFor={id}>
-        {label}
-      </label>
-      {children}
-    </div>
-  );
-}
-
-function Input({ id, label, type = "text", value, onChange, ...rest }) {
-  return (
-    <Field id={id} label={label}>
-      <input
-        id={id}
-        name={id}
-        type={type}
-        className={`${styles.field__input}`}
-        value={value}
-        onChange={onChange}
-        {...rest}
-      />
-    </Field>
-  );
-}
-
-function Select({ id, label, options, defaultValue, value, onChange }) {
-  return (
-    <Field id={id} label={label}>
-      <select
-        id={id}
-        name={id}
-        className={`${styles.field__input} ${styles["field__input--select"]}`}
-        value={value}
-        onChange={onChange}
-      >
-        <option disabled hidden value="">
-          {defaultValue.label}
-        </option>
-        {options.map((option) => (
-          <option
-            value={option.value}
-            key={option.value}
-            className={styles["field__input-option"]}
-          >
-            {option.label}
-          </option>
-        ))}
-      </select>
-    </Field>
-  );
-}
-
-function PhoneInput({ id, label, value, onChange, ...rest }) {
-  const mask = "+7 (999) 999-99-99";
-
-  const handleChange = (e) => {
-    const digits = e.target.value.replace(/[^0-9/+]/g, "");
-    let j = 0;
-    let i = 0;
-    let formated = "";
-    while (i < digits.length && j < mask.length) {
-      if (mask.charAt(j) === "9" || mask.charAt(j) === digits.charAt(i)) {
-        formated += digits.charAt(i++);
-      } else {
-        formated += mask.charAt(j);
-      }
-      j++;
-    }
-    onChange(formated);
-  };
-  return (
-    <Field id={id} label={label}>
-      <input
-        id={id}
-        name={id}
-        className={`${styles.field__input}`}
-        type="tel"
-        placeholder="+7 (___) ___-__-__"
-        pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}"
-        value={value}
-        onChange={handleChange}
-        {...rest}
-      />
-    </Field>
-  );
-}
-
-function DateInput({ id, label, minDate, value, onChange }) {
-  const datePicker = useRef(null);
-
-  useEffect(() => {
-    datePicker.current.min = minDate;
-  }, [minDate]);
-
-  const dateToPoints = (date) => {
-    if (!date) return "";
-    const [yyyy, mm, dd] = date.split("-");
-    return `${dd}.${mm}.${yyyy}`;
-  };
-
-  return (
-    <Field id={id} label={label}>
-      <div className={styles.field__container}>
-        <input
-          className={`${styles.field__input} p-normal`}
-          type="text"
-          id={`${id}-text`}
-          name={`${id}-text`}
-          placeholder="ДД.ММ.ГГГГ"
-          readOnly
-          value={dateToPoints(value)}
-          onClick={() => datePicker.current.showPicker()}
-        />
-        <input
-          id={id}
-          name={id}
-          ref={datePicker}
-          className={`${styles.field__input} ${styles["field__input--date"]} p-normal`}
-          type="date"
-          value={value}
-          onChange={onChange}
-          required
-        />
-      </div>
-    </Field>
-  );
-}
-
-function TextArea({ id, label, value, onChange }) {
-  return (
-    <Field id={id} label={label}>
-      <textarea
-        className={`${styles.field__input} ${styles["field__input--area"]}`}
-        name={id}
-        id={id}
-        value={value}
-        onChange={onChange}
-      />
-    </Field>
-  );
-}
-
-function RadioGroup({ id, label, options, value, onChange }) {
-  return (
-    <fieldset className={styles.radio}>
-      <legend>{label}</legend>
-      <div className={styles.radio__list}>
-        {options.map((item) => (
-          <label className={styles.radio__item} htmlFor={item.id} key={item.id}>
-            <input
-              className={styles.radio__button}
-              type="radio"
-              name={id}
-              id={item.id}
-              checked={value === item.id}
-              value={item.id}
-              onChange={onChange}
-              required
-            />
-            <span>{item.label}</span>
-          </label>
-        ))}
-      </div>
-    </fieldset>
-  );
-}
-
-function CheckBox({ id, children, value, onChange }) {
-  return (
-    <div className={styles.checkbox}>
-      <input
-        className={styles.checkbox__button}
-        type="checkbox"
-        id={id}
-        name={id}
-        checked={value}
-        onChange={onChange}
-        required
-      />
-      <label className={`p-small ${styles.checkbox__label}`} htmlFor={id}>
-        {children}
-      </label>
-    </div>
-  );
-}
-
-const getTodayIso = () => {
-  const date = new Date();
-  const yyyy = date.getFullYear();
-  const mm = String(date.getMonth() + 1).padStart(2, "0");
-  const dd = String(date.getDate()).padStart(2, "0");
-  return `${yyyy}-${mm}-${dd}`;
+const initialFormState = {
+  name: "",
+  direction: "",
+  email: "",
+  phone: "",
+  dateStart: "",
+  dateEnd: "",
+  comment: "",
+  age: "",
+  license: false,
 };
 
 export default function Form() {
   const todayIso = getTodayIso();
 
-  const initialFormState = {
-    name: "",
-    direction: "",
-    email: "",
-    phone: "",
-    dateStart: "",
-    dateEnd: "",
-    comment: "",
-    age: "",
-    license: false,
-  };
-
   const [formState, setFormState] = useState(initialFormState);
-
   const setStateElement = (key) => (value) => {
     setFormState((prev) => ({ ...prev, [key]: value }));
   };
 
   const handleChange = (key) => (e) => {
     setStateElement(key)(
-      e.target.type === "checkbox" ? e.target.checked : e.target.value,
+      e.target.type === "checkbox" ? e.target.checked : e.target.value
     );
   };
 
@@ -247,7 +57,7 @@ export default function Form() {
           required
         />
         <Select
-          id={"direction"}
+          id="direction"
           label={"Направление"}
           defaultValue={{ value: "", label: "Куда хотите ехать" }}
           options={[
@@ -309,7 +119,7 @@ export default function Form() {
         value={formState.age}
         onChange={handleChange("age")}
       />
-      <CheckBox
+      <Checkbox
         id="license"
         value={formState.license}
         onChange={handleChange("license")}
@@ -318,7 +128,7 @@ export default function Form() {
         <Link className={styles["checkbox__link"]} href="">
           Лицензионного договора
         </Link>
-      </CheckBox>
+      </Checkbox>
       <div className={styles.form__buttons}>
         <Button variant="submit" type="submit">
           Найти тур
