@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import styles from "./Hero.module.scss";
 
-export default function Hero({ href = "" }) {
+export default function Hero({ findTourHref = "" }) {
   return (
     <section className={styles["hero"]}>
       <h1 className={styles["hero__title"]}>
@@ -13,7 +13,7 @@ export default function Hero({ href = "" }) {
         <span className="hide-tablet show-mobile">,</span> а также рамки и место
         обучения кадров
       </p>
-      <Link className={`${styles["hero__button"]} p-small`} href={href}>
+      <Link className={`${styles["hero__button"]} p-small`} href={findTourHref}>
         Найти тур
       </Link>
     </section>
