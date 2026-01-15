@@ -7,7 +7,7 @@ export default function TourCard({ title, subtitle, img, alt, href }) {
   return (
     <AnimatedCard img={img} alt={alt}>
       <div className={styles.card__top}>
-        <h3>{title}</h3>
+        <h3 className={styles.card__title}>{title}</h3>
         {subtitle && <p className="p-small">{subtitle}</p>}
       </div>
       <div className={styles.card__bottom}>

@@ -8,7 +8,7 @@ export default function StoryCard({ title, img, alt, href, children, links }) {
   return (
     <AnimatedCard img={img} alt={alt} className={styles["card--big"]}>
       <div className={`${styles.card__top} ${styles['card__top--big']}`}>
-        <h3>{title}</h3>
+        <h3 className={styles.card__title}>{title}</h3>
         {children && <div className="p-normal">{children}</div>}
       </div>
       <div className={styles.card__bottom}>

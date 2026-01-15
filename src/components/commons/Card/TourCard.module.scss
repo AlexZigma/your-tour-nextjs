@@ -76,6 +76,10 @@
     }
   }
 
+  &__title {
+    text-wrap: balance;
+  }
+
   &__bottom {
     display: flex;
     justify-content: end;
@@ -89,7 +93,7 @@
       background-color: var(--green-400);
     }
 
-    &:active .card__button-label{
+    &:active .card__button-label {
       background-color: var(--orange-200);
     }
   }
