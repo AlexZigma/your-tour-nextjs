@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-import { nav_links } from "@/data/nav";
+import { navLinks } from "@/data/nav";
 
 import AppLink from "../AppLink/AppLink";
 import styles from "./Header.module.scss";
@@ -38,7 +38,7 @@ export default function Header() {
         </Link>
         <nav className={`${styles["header__nav"]} p-normal`}>
           <ul className={styles["header__nav-list"]}>
-            {nav_links.map((item) => (
+            {navLinks.map((item) => (
               <li key={item.href}>
                 <AppLink href={item.href} dark={isFixed}>
                   {item.label}
